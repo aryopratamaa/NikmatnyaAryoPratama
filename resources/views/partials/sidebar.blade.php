@@ -17,89 +17,79 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-        <li class="menu-item">
+        <li class="menu-item {{ request()->is('/') ? 'active' : '' }}">
             <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
         </li>
 
-        <li class="menu-item">
+        <li class="menu-item {{ request()->routeIs('partnertype.*', 'partner.*', 'user.*', 'promo.*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
                 <div data-i18n="Master">Master</div>
             </a>
             <ul class="menu-sub">
-
-                <li class="menu-item">
-                    <a href="{{ route('partnertype.index') }}" class="menu-link"
-                        {{ request()->routeIs('partnertype.*') ? 'active' : '' }} class="menu-link">
+                <li class="menu-item {{ request()->routeIs('partnertype.*') ? 'active' : '' }}">
+                    <a href="{{ route('partnertype.index') }}" class="menu-link">
                         <div data-i18n="Tipes of Partners">Tipes of Partners</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="{{ route('partner.index') }}" class="menu-link"
-                        {{ request()->routeIs('partner.*') ? 'active' : '' }}>
+                <li class="menu-item {{ request()->routeIs('partner.*') ? 'active' : '' }}">
+                    <a href="{{ route('partner.index') }}" class="menu-link">
                         <div data-i18n="Partners">Partners</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="{{ route('user.index') }}"
-                        class="menu-link {{ request()->routeIs('user.*') ? 'active' : '' }}">
+                <li class="menu-item {{ request()->routeIs('user.*') ? 'active' : '' }}">
+                    <a href="{{ route('user.index') }}" class="menu-link">
                         <div data-i18n="Users">Users</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="{{ route('promo.index') }}"
-                        class="menu-link {{ request()->routeIs('promo.*') ? 'active' : '' }}">
+                <li class="menu-item {{ request()->routeIs('promo.*') ? 'active' : '' }}">
+                    <a href="{{ route('promo.index') }}" class="menu-link">
                         <div data-i18n="Promos">Promos</div>
                     </a>
                 </li>
             </ul>
         </li>
 
-        <li class="menu-item">
+        <li class="menu-item {{ request()->is('report/*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <i class="menu-icon tf-icons bx bx-file"></i>
                 <div data-i18n="Reports">Reports</div>
             </a>
             <ul class="menu-sub">
-
-                <li class="menu-item">
-                    <a href="{{ route('report.index', 'partnertype') }}" class="menu-link"
-                        {{ request()->is('report/partnertype') ? 'active' : '' }}>
+                <li class="menu-item {{ request()->is('report/partnertype') ? 'active' : '' }}">
+                    <a href="{{ route('report.index', 'partnertype') }}" class="menu-link">
                         <div data-i18n="Tipes of Partners">Tipes of Partners</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="{{ route('report.index', 'partner') }}" class="menu-link"
-                        {{ request()->is('report/partner') ? 'active' : '' }}>
+                <li class="menu-item {{ request()->is('report/partner') ? 'active' : '' }}">
+                    <a href="{{ route('report.index', 'partner') }}" class="menu-link">
                         <div data-i18n="Partners">Partners</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="{{ route('report.index', 'promo') }}" class="menu-link"
-                        {{ request()->is('report/promo') ? 'active' : '' }}>
+                <li class="menu-item {{ request()->is('report/promo') ? 'active' : '' }}">
+                    <a href="{{ route('report.index', 'promo') }}" class="menu-link">
                         <div data-i18n="Promos">Promos</div>
                     </a>
                 </li>
             </ul>
         </li>
 
-
-        <li class="menu-item">
-            <a href="{{ route('setting') }}" class="menu-link" {{ request()->routeIs('setting') ? 'active' : '' }}>
-                <i class="menu-icon tf-icons bx bx-collection"></i>
+        <li class="menu-item {{ request()->routeIs('setting') ? 'active' : '' }}">
+            <a href="{{ route('setting') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cog"></i>
                 <div data-i18n="Setting">Setting</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="{{ route('support') }}" class="menu-link" {{ request()->routeIs('support') ? 'active' : '' }}>
-                <i class="menu-icon tf-icons bx bx-collection"></i>
+        
+        <li class="menu-item {{ request()->routeIs('support') ? 'active' : '' }}">
+            <a href="{{ route('support') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-support"></i>
                 <div data-i18n="Support">Support</div>
             </a>
         </li>
-
 
     </ul>
 </aside>

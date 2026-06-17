@@ -3,16 +3,25 @@
 
 @section('content')
 <div class="card border-0 shadow-sm rounded-4">
-    <div class="card-body p-4">
-        <h5 class="card-title fw-bold text-primary border-bottom pb-3 mb-4">Tambah Tipe Partner Baru</h5>
-        
+    <div class="card-header bg-white border-bottom pt-4 pb-3 px-4">
+        <h5 class="card-title fw-bold text-primary mb-0 d-flex align-items-center">
+            <i class="bx bx-plus-circle fs-4 me-2"></i> Tambah Tipe Partner Baru
+        </h5>
+    </div>
+    
+    <div class="card-body p-4 p-md-5">
         <form action="{{ route('partnertype.store') }}" method="POST">
             @csrf
+            
             @include('partnertype._form')
 
-            <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
-                <a href="{{ route('partnertype.index') }}" class="btn btn-outline-secondary px-4">Batal</a>
-                <button type="submit" class="btn btn-primary px-4">Simpan Data</button>
+            <div class="d-flex justify-content-end gap-3 mt-5 pt-3 border-top">
+                <a href="{{ route('partnertype.index') }}" class="btn btn-outline-secondary rounded-pill px-4 fw-semibold d-flex align-items-center">
+                    <i class="bx bx-arrow-back me-2"></i> Batal
+                </a>
+                <button type="submit" class="btn btn-primary rounded-pill px-5 fw-bold shadow-sm d-flex align-items-center">
+                    <i class="bx bx-save me-2"></i> Simpan Data
+                </button>
             </div>
         </form>
     </div>
