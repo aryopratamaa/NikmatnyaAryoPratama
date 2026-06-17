@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-fluid.html" class="menu-link">
+                    <a href="{{ route('user.index') }}" class="menu-link {{ request()->routeIs('user.*') ? 'active' : '' }}">
                         <div data-i18n="Users">Users</div>
                     </a>
                 </li>
