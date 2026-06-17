@@ -49,7 +49,17 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-blank.html" class="menu-link">
+                    <a href="{{ route('promo.index') }}" class="menu-link {{ request()->routeIs('promo.*') ? 'active' : '' }}">
+                        <div data-i18n="Promos">Promos</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Reports">Reports</div>
                         <div data-i18n="Promos">Promos</div>
                     </a>
                 </li>
