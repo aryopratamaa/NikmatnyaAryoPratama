@@ -66,19 +66,20 @@
             <ul class="menu-sub">
 
                 <li class="menu-item">
-                    <a href="{{ route('partnertype.index') }}" class="menu-link"
-                        {{ request()->routeIs('partnertype.*') ? 'active' : '' }}>
+                    <a href="{{ route('report.index', 'partnertype') }}" class="menu-link"
+                        {{ request()->is('report/partnertype') ? 'active' : '' }}>
                         <div data-i18n="Tipes of Partners">Tipes of Partners</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('partner.index') }}" class="menu-link"
-                        {{ request()->routeIs('partner.*') ? 'active' : '' }}>
+                    <a href="{{ route('report.index', 'partner') }}" class="menu-link"
+                        {{ request()->is('report/partner') ? 'active' : '' }}>
                         <div data-i18n="Partners">Partners</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-blank.html" class="menu-link">
+                    <a href="{{ route('report.index', 'promo') }}" class="menu-link"
+                        {{ request()->is('report/promo') ? 'active' : '' }}>
                         <div data-i18n="Promos">Promos</div>
                     </a>
                 </li>
