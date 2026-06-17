@@ -39,6 +39,16 @@
     <script src="{{ asset('sneat/assets/vendor/js/helpers.js') }}"></script>
 
     <script src="{{ asset('sneat/assets/js/config.js') }}"></script>
+    <style>
+      .layout-menu {
+          width: 300px !important; 
+      }
+      @media (min-width: 1200px) {
+          .layout-menu-fixed .layout-wrapper:not(.layout-without-menu) .layout-page {
+              padding-left: 300px !important;
+          }
+      }
+    </style>
   </head>
 
   <body>
