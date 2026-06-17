@@ -88,13 +88,13 @@
 
 
         <li class="menu-item">
-            <a href="cards-basic.html" class="menu-link">
+            <a href="{{ route('setting') }}" class="menu-link" {{ request()->routeIs('setting') ? 'active' : '' }}>
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Setting">Setting</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="cards-basic.html" class="menu-link">
+            <a href="{{ route('support') }}" class="menu-link" {{ request()->routeIs('support') ? 'active' : '' }}>
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Support">Support</div>
             </a>

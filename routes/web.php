@@ -16,3 +16,6 @@ Route::resource('user', UserController::class);
 Route::resource('promo', PromoController::class);
 
 Route::get('/report/{type}', [ReportController::class, 'index'])->name('report.index');
+
+Route::view('/setting', 'setting')->name('setting');
+Route::view('/support', 'support')->name('support');
