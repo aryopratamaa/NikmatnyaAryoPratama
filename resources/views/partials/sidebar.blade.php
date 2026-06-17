@@ -38,28 +38,20 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('partner.index') }}" class="menu-link" 
+                    <a href="{{ route('partner.index') }}" class="menu-link"
                         {{ request()->routeIs('partner.*') ? 'active' : '' }}>
                         <div data-i18n="Partners">Partners</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('user.index') }}" class="menu-link {{ request()->routeIs('user.*') ? 'active' : '' }}">
+                    <a href="{{ route('user.index') }}"
+                        class="menu-link {{ request()->routeIs('user.*') ? 'active' : '' }}">
                         <div data-i18n="Users">Users</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('promo.index') }}" class="menu-link {{ request()->routeIs('promo.*') ? 'active' : '' }}">
-                        <div data-i18n="Promos">Promos</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Reports">Reports</div>
+                    <a href="{{ route('promo.index') }}"
+                        class="menu-link {{ request()->routeIs('promo.*') ? 'active' : '' }}">
                         <div data-i18n="Promos">Promos</div>
                     </a>
                 </li>
@@ -80,7 +72,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('partner.index') }}" class="menu-link" 
+                    <a href="{{ route('partner.index') }}" class="menu-link"
                         {{ request()->routeIs('partner.*') ? 'active' : '' }}>
                         <div data-i18n="Partners">Partners</div>
                     </a>

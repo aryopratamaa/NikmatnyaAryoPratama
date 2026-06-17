@@ -1,15 +1,15 @@
 <div class="row">
     <div class="col-md-6 mb-3">
         <label class="form-label fw-semibold">Tempat Usaha (Partner) <span class="text-danger">*</span></label>
-        <select name="PartnersID" class="form-select @error('PartnersID') is-invalid @enderror" required>
+        <select name="partnerID" class="form-select @error('partnerID') is-invalid @enderror" required>
             <option value="">-- Pilih Partner --</option>
             @foreach($partners as $p)
-                <option value="{{ $p->id }}" {{ old('PartnersID', $promo->PartnersID ?? '') == $p->id ? 'selected' : '' }}>
+                <option value="{{ $p->id }}" {{ old('partnerID', $promo->partnerID ?? '') == $p->id ? 'selected' : '' }}>
                     {{ $p->namausaha }}
                 </option>
             @endforeach
         </select>
-        @error('PartnersID') <small class="text-danger">{{ $message }}</small> @enderror
+        @error('partnerID') <small class="text-danger">{{ $message }}</small> @enderror
     </div>
 
     <div class="col-md-6 mb-3">

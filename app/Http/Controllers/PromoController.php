@@ -32,7 +32,7 @@ class PromoController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'PartnersID' => 'required|exists:partners,id',
+            'partnerID' => 'required|exists:partners,id',
             'persen' => 'required|integer|min:1|max:100',
             'mulai_tgl' => 'required|date',
             'hingga_tgl' => 'required|date|after_or_equal:mulai_tgl',
@@ -67,7 +67,7 @@ class PromoController extends Controller
     public function update(Request $request, string $id)
     {
         $validatedData = $request->validate([
-            'PartnersID' => 'required|exists:partners,id',
+            'partnerID' => 'required|exists:partners,id',
             'persen' => 'required|integer|min:1|max:100',
             'mulai_tgl' => 'required|date',
             'hingga_tgl' => 'required|date|after_or_equal:mulai_tgl',
