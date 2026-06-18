@@ -26,6 +26,14 @@
             </div>
         @endif
 
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
+                <i class="bx bx-error-circle fs-4 me-2"></i>
+                <div>{{ session('error') }}</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
         <div class="table-responsive text-nowrap rounded-3 border">
             <table class="table table-hover align-middle mb-0">
                 <thead class="table-light border-bottom">

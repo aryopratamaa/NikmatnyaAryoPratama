@@ -77,8 +77,19 @@ class PartnertypeController extends Controller
      */
     public function destroy(string $id)
     {
-        $partnertype = Partnertype::findOrFail($id);
-        $partnertype->delete();
-        return redirect()->route('partnertype.index')->with('success', 'Tipe Partner berhasil dihapus!');
+        try {
+            $partnertype = Partnertype::findOrFail($id);
+            $partnertype->delete();
+            
+            return redirect()->route('partnertype.index')->with('success', 'Tipe Partner berhasil dihapus!');
+            
+        } catch (\Illuminate\Database\QueryException $e) {
+            if ($e->getCode() == "23000") {
+                return redirect()->route('partnertype.index')->with('error', 'Data tidak dapat dihapus karena Tipe Partner ini sedang digunakan oleh data Partner!');
+            }
+            
+            // Jika ada error database lainnya
+            return redirect()->route('partnertype.index')->with('error', 'Terjadi kesalahan sistem saat menghapus data.');
+        }
     }
 }
