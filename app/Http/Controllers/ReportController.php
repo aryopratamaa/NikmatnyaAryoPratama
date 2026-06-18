@@ -7,6 +7,7 @@ use App\Models\Partnertype;
 use App\Models\Partner;
 use App\Models\Promo;
 use App\Models\User;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ReportController extends Controller
 {
@@ -15,24 +16,25 @@ class ReportController extends Controller
      */
     public function index($type)
     {
-        $data = [];
-        $title = '';
-
         if ($type == 'partnertype') {
             $data = Partnertype::all();
-            $title = 'Laporan Tipe Partner Usaha';
-        } elseif ($type == 'partner') {
+            $pdf = Pdf::loadView('report.partnertype', compact('data'));
+            return $pdf->stream('Laporan_Tipe_Partner.pdf');
 
+        } elseif ($type == 'partner') {
+            // Mengambil User beserta relasi Partner (Nama Usaha, Alamat, Email, Role)
             $data = User::with('partner')->get();
-            $title = 'Laporan Daftar Partner dan Hak Akses';
+            $pdf = Pdf::loadView('report.partner', compact('data'));
+            return $pdf->stream('Laporan_Partners.pdf');
+
         } elseif ($type == 'promo') {
             $data = Promo::with('partner')->orderBy('mulai_tgl', 'desc')->get();
-            $title = 'Laporan Daftar Promo Usaha';
+            $pdf = Pdf::loadView('report.promo', compact('data'));
+            return $pdf->stream('Laporan_Promos.pdf');
+
         } else {
             abort(404);
         }
-
-        return view('report.index', compact('data', 'type', 'title'));
     }
 
     /**

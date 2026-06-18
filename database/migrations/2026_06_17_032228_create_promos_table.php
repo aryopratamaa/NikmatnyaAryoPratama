@@ -19,8 +19,7 @@ return new class extends Migration
 
             $table->foreignId('partnerID')
             ->constrained('partners')
-            ->cascadeOnUpdate()
-            ->restrictOnDelete();
+            ->onDelete('cascade');
             
             $table->timestamps();
         });

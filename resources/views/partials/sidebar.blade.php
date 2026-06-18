@@ -60,17 +60,17 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item {{ request()->is('report/partnertype') ? 'active' : '' }}">
-                    <a href="{{ route('report.index', 'partnertype') }}" class="menu-link">
+                    <a href="{{ route('report.index', 'partnertype') }}" class="menu-link" target="_blank">
                         <div data-i18n="Tipes of Partners">Tipes of Partners</div>
                     </a>
                 </li>
                 <li class="menu-item {{ request()->is('report/partner') ? 'active' : '' }}">
-                    <a href="{{ route('report.index', 'partner') }}" class="menu-link">
+                    <a href="{{ route('report.index', 'partner') }}" class="menu-link" target="_blank">
                         <div data-i18n="Partners">Partners</div>
                     </a>
                 </li>
                 <li class="menu-item {{ request()->is('report/promo') ? 'active' : '' }}">
-                    <a href="{{ route('report.index', 'promo') }}" class="menu-link">
+                    <a href="{{ route('report.index', 'promo') }}" class="menu-link" target="_blank">
                         <div data-i18n="Promos">Promos</div>
                     </a>
                 </li>
