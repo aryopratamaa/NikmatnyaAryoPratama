@@ -20,7 +20,7 @@
         <li class="menu-item {{ request()->is('/') ? 'active' : '' }}">
             <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <div data-i18n="Dashboard">Dashboard</div>
             </a>
         </li>
 
@@ -32,7 +32,7 @@
             <ul class="menu-sub">
                 <li class="menu-item {{ request()->routeIs('partnertype.*') ? 'active' : '' }}">
                     <a href="{{ route('partnertype.index') }}" class="menu-link">
-                        <div data-i18n="Tipes of Partners">Tipes of Partners</div>
+                        <div data-i18n="Type of Partners">Type of Partners</div>
                     </a>
                 </li>
                 <li class="menu-item {{ request()->routeIs('partner.*') ? 'active' : '' }}">
@@ -59,19 +59,14 @@
                 <div data-i18n="Reports">Reports</div>
             </a>
             <ul class="menu-sub">
-                
                 <li class="menu-item {{ request()->routeIs('report.form') ? 'active' : '' }}">
-                    <a href="{{ route('report.form') }}" class="menu-link text-primary fw-bold">
-                        <i class="bx bx-list-ul me-2"></i>
+                    <a href="{{ route('report.form') }}" class="menu-link">
                         <div data-i18n="Pilih Laporan">Pilih Laporan</div>
                     </a>
                 </li>
-                
-                <li><hr class="dropdown-divider my-1"></li>
-
                 <li class="menu-item {{ request()->is('report/partnertype') ? 'active' : '' }}">
                     <a href="{{ route('report.index', 'partnertype') }}" class="menu-link" target="_blank">
-                        <div data-i18n="Tipes of Partners">Tipes of Partners</div>
+                        <div data-i18n="Type of Partners">Type of Partners</div>
                     </a>
                 </li>
                 <li class="menu-item {{ request()->is('report/partner') ? 'active' : '' }}">
@@ -100,6 +95,5 @@
                 <div data-i18n="Support">Support</div>
             </a>
         </li>
-
     </ul>
 </aside>

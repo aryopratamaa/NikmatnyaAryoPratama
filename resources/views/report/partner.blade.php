@@ -51,7 +51,7 @@
     <table class="ttd">
         <tr>
             <td width="65%"></td>
-            <td width="35%" class="text-center">
+            <td width="35%" class="text-left">
                 <p>Medan, {{ \Carbon\Carbon::now()->format('d F Y') }}<br>Admin Sistem,</p>
                 <br><br><br>
                 <p style="text-decoration: underline; font-weight: bold;">_________________________</p>
