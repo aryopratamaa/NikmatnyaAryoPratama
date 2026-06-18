@@ -20,7 +20,7 @@
                         <a href="{{ route('user.index') }}" class="btn btn-secondary fw-medium px-4">
                             Batal
                         </a>
-                        <button type="submit" class="btn btn-dark fw-medium px-4 d-flex align-items-center">
+                        <button type="submit" class="btn btn-primary fw-medium px-4 d-flex align-items-center">
                             <i class="bx bx-save me-2"></i> Simpan Data
                         </button>
                     </div>

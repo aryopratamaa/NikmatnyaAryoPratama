@@ -5,10 +5,10 @@
 <div class="card shadow-sm rounded-3 border-0">
     <div class="card-header bg-white border-bottom d-flex justify-content-between align-items-center py-3 px-4">
         <h5 class="mb-0 fw-bold text-dark d-flex align-items-center">
-            <i class="bx bx-group fs-4 me-2"></i> Kelola Akun Pengguna
+            <i class="bx bx-group fs-4 me-2 text-dark"></i> Kelola Akun Pengguna
         </h5>
-        <a href="{{ route('user.create') }}" class="btn btn-dark btn-sm fw-medium px-3">
-            <i class="bx bx-user-plus me-1"></i> Tambah Baru
+        <a href="{{ route('user.create') }}" class="btn btn-primary btn-sm fw-medium px-3">
+            <i class="bx bx-plus me-1"></i> Tambah Baru
         </a>
     </div>
 
@@ -61,16 +61,16 @@
                         </td>
                         <td>
                             <div class="d-flex justify-content-center gap-2">
-                                <a href="{{ route('user.show', $u->id) }}" class="btn btn-sm btn-info d-flex align-items-center text-white">
+                                <a href="{{ route('user.show', $u->id) }}" class="btn btn-sm btn-info text-white rounded-2 shadow-sm d-flex align-items-center px-3">
                                     <i class="bx bx-show me-1"></i> Detail
                                 </a>
-                                <a href="{{ route('user.edit', $u->id) }}" class="btn btn-sm btn-warning d-flex align-items-center text-white">
+                                <a href="{{ route('user.edit', $u->id) }}" class="btn btn-sm btn-warning text-white rounded-2 shadow-sm d-flex align-items-center px-3">
                                     <i class="bx bx-edit-alt me-1"></i> Edit
                                 </a>
                                 <form action="{{ route('user.destroy', $u->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus akun ini?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-danger d-flex align-items-center">
+                                    <button type="submit" class="btn btn-sm btn-danger rounded-2 shadow-sm d-flex align-items-center px-3">
                                         <i class="bx bx-trash me-1"></i> Hapus
                                     </button>
                                 </form>
