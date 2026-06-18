@@ -11,6 +11,22 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class ReportController extends Controller
 {
+    // Menampilkan halaman form pilihan laporan
+    public function form()
+    {
+        return view('report.form');
+    }
+
+    // Memproses pilihan dari Form Dropdown dan memanggil fungsi index PDF
+    public function preview(Request $request)
+    {
+        $request->validate([
+            'jenis_laporan' => 'required|in:partnertype,partner,promo'
+        ]);
+
+        return $this->index($request->jenis_laporan);
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -22,7 +38,6 @@ class ReportController extends Controller
             return $pdf->stream('Laporan_Tipe_Partner.pdf');
 
         } elseif ($type == 'partner') {
-            // Mengambil User beserta relasi Partner (Nama Usaha, Alamat, Email, Role)
             $data = User::with('partner')->get();
             $pdf = Pdf::loadView('report.partner', compact('data'));
             return $pdf->stream('Laporan_Partners.pdf');

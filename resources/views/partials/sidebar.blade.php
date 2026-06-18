@@ -53,12 +53,22 @@
             </ul>
         </li>
 
-        <li class="menu-item {{ request()->is('report/*') ? 'active open' : '' }}">
+        <li class="menu-item {{ request()->is('report*') ? 'active open' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-file"></i>
                 <div data-i18n="Reports">Reports</div>
             </a>
             <ul class="menu-sub">
+                
+                <li class="menu-item {{ request()->routeIs('report.form') ? 'active' : '' }}">
+                    <a href="{{ route('report.form') }}" class="menu-link text-primary fw-bold">
+                        <i class="bx bx-list-ul me-2"></i>
+                        <div data-i18n="Pilih Laporan">Pilih Laporan</div>
+                    </a>
+                </li>
+                
+                <li><hr class="dropdown-divider my-1"></li>
+
                 <li class="menu-item {{ request()->is('report/partnertype') ? 'active' : '' }}">
                     <a href="{{ route('report.index', 'partnertype') }}" class="menu-link" target="_blank">
                         <div data-i18n="Tipes of Partners">Tipes of Partners</div>

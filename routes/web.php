@@ -15,6 +15,9 @@ Route::resource('partner', PartnerController::class);
 Route::resource('user', UserController::class);
 Route::resource('promo', PromoController::class);
 
+Route::get('/report/form', [ReportController::class, 'form'])->name('report.form');
+Route::get('/report/preview', [ReportController::class, 'preview'])->name('report.preview');
+
 Route::get('/report/{type}', [ReportController::class, 'index'])->name('report.index');
 
 Route::view('/setting', 'setting')->name('setting');
