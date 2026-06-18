@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    
     <title>@yield('title') - Nikmat Rasanyo</title>
     <meta name="description" content="" />
-    <link rel="icon" type="image/x-icon" href="{{ asset('sneat/assets/img/favicon/favicon.ico') }}" />
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🍴</text></svg>">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
@@ -14,10 +17,31 @@
     <link rel="stylesheet" href="{{ asset('sneat/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{ asset('sneat/assets/css/demo.css') }}" />
     <link rel="stylesheet" href="{{ asset('sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    
     <script src="{{ asset('sneat/assets/vendor/js/helpers.js') }}"></script>
     <script src="{{ asset('sneat/assets/js/config.js') }}"></script>
+    
     <style>
-        .layout-menu { width: 300px !important; }
+        
+        .layout-menu,
+        .menu-vertical,
+        .bg-menu-theme.menu-vertical,
+        .app-brand {
+            width: 300px !important;
+        }
+
+        
+        .menu-vertical .menu-inner,
+        .menu-vertical .menu-item {
+            width: 100% !important;
+        }
+
+        
+        .menu-vertical .menu-item .menu-link {
+            width: calc(100% - 2rem) !important;
+        }
+
+        
         @media (min-width: 1200px) {
             .layout-menu-fixed .layout-wrapper:not(.layout-without-menu) .layout-page {
                 padding-left: 300px !important;
@@ -29,7 +53,9 @@
 <body>
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
+            
             @include('partials.sidebar')
+            
             <div class="layout-page">
                 @include('partials.header')
 
@@ -42,6 +68,7 @@
                     <div class="content-backdrop fade"></div>
                 </div>
             </div>
+            
         </div>
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
