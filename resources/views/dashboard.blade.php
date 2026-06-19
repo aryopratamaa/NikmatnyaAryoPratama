@@ -19,34 +19,35 @@
         justify-content: center;
     }
     .hero-banner {
-        background: linear-gradient(135deg, rgba(105, 108, 255, 0.05) 0%, rgba(105, 108, 255, 0.15) 100%);
-        border-left: 5px solid #696cff;
+        background: linear-gradient(135deg, #696cff 0%, #4346eb 100%);
+        position: relative;
+        overflow: hidden;
     }
 </style>
 
 <div class="row mb-4">
     <div class="col-12">
-        <div class="card shadow-sm border-0 rounded-4 hero-banner">
-            <div class="card-body p-4 p-md-5">
+        <div class="card shadow-lg border-0 rounded-4 hero-banner">
+            <div class="card-body p-4 p-md-5 position-relative z-1">
                 <div class="row align-items-center">
-                    <div class="col-lg-8">
-                        <h2 class="fw-bolder text-primary mb-3" style="letter-spacing: -0.5px;">
+                    <div class="col-lg-9">
+                        <h2 class="fw-bolder text-white mb-3" style="letter-spacing: -0.5px;">
                             Dari Hobi Jadi Bisnis, Dari Rasa Jadi Keluarga.
                         </h2>
-                        <p class="text-dark fs-6 mb-4" style="line-height: 1.8;">
+                        <p class="text-white fs-6 mb-4" style="line-height: 1.8; opacity: 0.9;">
                             <strong>Nikmat Rasanyo..!</strong> adalah rumah bagi para pencinta, pelaku, dan inovator kuliner. Tempat kolaborasi melahirkan kreasi, dan komunitas mendorong pertumbuhan bisnis FnB-mu.
                         </p>
                         
-                        <h6 class="fw-bold text-muted text-uppercase mb-3" style="letter-spacing: 1px;">Kenapa harus Sodapnya..!?</h6>
+                        <h6 class="fw-bold text-white text-uppercase mb-3" style="letter-spacing: 1px; opacity: 0.85;">Kenapa harus Sodapnya..!?</h6>
                         <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-white text-primary border border-primary px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-network-chart me-1"></i> Networking Kuliner</span>
-                            <span class="badge bg-white text-success border border-success px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-share-alt me-1"></i> Knowledge Sharing</span>
-                            <span class="badge bg-white text-warning border border-warning px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-briefcase-alt-2 me-1"></i> Kolaborasi Bisnis</span>
-                            <span class="badge bg-white text-danger border border-danger px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-trending-up me-1"></i> Eksposur Brand</span>
+                            <span class="badge bg-white text-primary px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-network-chart me-1"></i> Networking Kuliner</span>
+                            <span class="badge bg-white text-success px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-share-alt me-1"></i> Knowledge Sharing</span>
+                            <span class="badge bg-white text-warning px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-briefcase-alt-2 me-1"></i> Kolaborasi Bisnis</span>
+                            <span class="badge bg-white text-danger px-3 py-2 rounded-pill shadow-sm"><i class="bx bx-trending-up me-1"></i> Eksposur Brand</span>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-flex justify-content-center">
-                        <i class="bx bx-restaurant text-primary" style="font-size: 10rem; opacity: 0.2;"></i>
+                    <div class="col-lg-3 d-none d-lg-flex justify-content-end position-relative">
+                        <i class="bx bx-restaurant text-white position-absolute" style="font-size: 14rem; opacity: 0.15; top: -80px; right: -20px;"></i>
                     </div>
                 </div>
             </div>
