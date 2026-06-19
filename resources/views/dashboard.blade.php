@@ -58,11 +58,11 @@
     <div class="col-sm-6 col-xl-3">
         <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
             <div class="card-body p-4 d-flex align-items-center gap-3">
-                <div class="icon-box bg-label-primary">
-                    <i class="bx bx-layer text-primary" style="font-size: 2.5rem;"></i>
+                <div class="icon-box bg-primary text-white shadow-sm">
+                    <i class="bx bx-layer" style="font-size: 2.2rem;"></i>
                 </div>
                 <div>
-                    <p class="mb-1 text-muted fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Tipe Partner</p>
+                    <p class="mb-1 text-secondary fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Tipe Partner</p>
                     <h3 class="fw-bolder mb-0 text-dark">{{ $totalTipePartner }}</h3>
                 </div>
             </div>
@@ -72,11 +72,11 @@
     <div class="col-sm-6 col-xl-3">
         <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
             <div class="card-body p-4 d-flex align-items-center gap-3">
-                <div class="icon-box bg-label-success">
-                    <i class="bx bx-store-alt text-success" style="font-size: 2.5rem;"></i>
+                <div class="icon-box bg-success text-white shadow-sm">
+                    <i class="bx bx-store-alt" style="font-size: 2.2rem;"></i>
                 </div>
                 <div>
-                    <p class="mb-1 text-muted fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Partner</p>
+                    <p class="mb-1 text-secondary fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Partner</p>
                     <h3 class="fw-bolder mb-0 text-dark">{{ $totalPartner }}</h3>
                 </div>
             </div>
@@ -86,11 +86,11 @@
     <div class="col-sm-6 col-xl-3">
         <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
             <div class="card-body p-4 d-flex align-items-center gap-3">
-                <div class="icon-box bg-label-info">
-                    <i class="bx bx-user-circle text-info" style="font-size: 2.5rem;"></i>
+                <div class="icon-box bg-info text-white shadow-sm">
+                    <i class="bx bx-user-circle" style="font-size: 2.2rem;"></i>
                 </div>
                 <div>
-                    <p class="mb-1 text-muted fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Pengguna</p>
+                    <p class="mb-1 text-secondary fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Pengguna</p>
                     <h3 class="fw-bolder mb-0 text-dark">{{ $totalUser }}</h3>
                 </div>
             </div>
@@ -100,11 +100,11 @@
     <div class="col-sm-6 col-xl-3">
         <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
             <div class="card-body p-4 d-flex align-items-center gap-3">
-                <div class="icon-box bg-label-warning">
-                    <i class="bx bxs-discount text-warning" style="font-size: 2.5rem;"></i>
+                <div class="icon-box bg-warning text-white shadow-sm">
+                    <i class="bx bxs-discount" style="font-size: 2.2rem;"></i>
                 </div>
                 <div>
-                    <p class="mb-1 text-muted fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Promo</p>
+                    <p class="mb-1 text-secondary fw-bold text-uppercase" style="font-size: 0.75rem; letter-spacing: 0.5px;">Total Promo</p>
                     <h3 class="fw-bolder mb-0 text-dark">{{ $totalPromo }}</h3>
                 </div>
             </div>
